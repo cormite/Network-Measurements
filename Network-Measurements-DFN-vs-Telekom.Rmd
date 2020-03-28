@@ -11,7 +11,7 @@ setwd("~/Documents/RStudio/Network-Measurements-DFN-vs-Telekom/")
 
 # Import the data
 ```{r}
-throughput <- read.csv(file = 'throughput.csv')
+throughput <- read.csv(file = 'throughput.csv', stringsAsFactors = FALSE)
 head(throughput)
 ```
 
