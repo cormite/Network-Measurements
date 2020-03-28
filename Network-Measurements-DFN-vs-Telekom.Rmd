@@ -1,0 +1,27 @@
+---
+author: "Carlos Fernandez San Millan"
+title: "Network-Measurements-DFN-vs-Telekom"
+output: html_notebook
+---
+
+# Set working directory
+```{r}
+setwd("~/Documents/RStudio/Network-Measurements-DFN-vs-Telekom/")
+```
+
+# Import the data
+```{r}
+throughput <- read.csv(file = 'throughput.csv')
+head(throughput)
+```
+
+# Show dataframe’s internal structure
+```{r}
+str(throughput)
+```
+
+
+
+
+
+
