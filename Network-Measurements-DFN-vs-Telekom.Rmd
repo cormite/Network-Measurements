@@ -1,26 +1,50 @@
 ---
-author: "Carlos Fernandez San Millan"
 title: "Network-Measurements-DFN-vs-Telekom"
-output: html_notebook
+author: "Carlos Fernandez San Millan"
+output:
+  html_document:
+    df_print: paged
 ---
 
-# Set working directory
-```{r}
-setwd("~/Documents/RStudio/Network-Measurements-DFN-vs-Telekom/")
+## Throughput
+
+### Import the data
+```{r, echo=F}
+(throughput <- read.csv(file = 'throughput.csv', stringsAsFactors = FALSE))
 ```
 
-# Import the data
-```{r}
-throughput <- read.csv(file = 'throughput.csv', stringsAsFactors = FALSE)
-head(throughput)
-```
-
-# Show dataframe’s internal structure
+### Show dataframes internal structure
 ```{r}
 str(throughput)
 ```
 
+- Separate histograms
+```{r}
+hist(throughput$DFN, breaks = 10)
+hist(throughput$Telekom, breaks = 10)
+```
 
+- Prepare data for ggplot
+```{r}
+library(reshape2)
+throughput_plot <- melt(throughput)
+colnames(throughput_plot) <- c("provider", "throughput")
+```
 
+- Combined histogram
+```{r, message=F, warning=F}
+library(ggplot2)
+
+p <- ggplot(throughput_plot, aes(x=throughput, fill=provider))
+p <- p + geom_histogram(alpha=0.7, binwidth = 0.02)
+p
+```
+
+- Combined density plot
+```{r}
+p <- ggplot(throughput_plot, aes(x=throughput, fill=provider))
+p <- p + geom_density()
+p
+```
 
 
