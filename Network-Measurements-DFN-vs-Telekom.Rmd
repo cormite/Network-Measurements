@@ -24,31 +24,56 @@ colnames(throughput_plot) <- c("Provider", "Throughput")
 
 - Combined histogram
 
-```{r, message=F, warning=F, echo=F}
+```{r, message=F, warning=F, echo=F, fig.width=9}
 library(ggplot2)
 
 p <- ggplot(throughput_plot, aes(x=Throughput, fill=Provider))
 p <- p + geom_histogram(alpha=1, binwidth = 0.04)
 p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
+p <- p + scale_x_continuous(breaks=seq(5,10,0.5))
+p <- p + theme(axis.text.x=element_text(face="bold")) 
+p <- p + theme(axis.text.y=element_text(face="bold")) 
 p
 ```
 
 - Combined density plot
 
-```{r, echo=F}
+```{r, echo=F, fig.width=9}
 p <- ggplot(throughput_plot, aes(x=Throughput, fill=Provider))
 p <- p + geom_density()
 p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
+p <- p + scale_x_continuous(breaks=seq(5,10,0.5))
+p <- p + theme(axis.text.x=element_text(face="bold")) 
+p <- p + theme(axis.text.y=element_text(face="bold")) 
 p
 ```
 
 
-## Traceroute and latency comparison
+## Traceroute and latency
 
 - Import the data
 
 ```{r, echo=F}
-(mtr <- read.csv('mtr_google.com.txt', header=F, skip=2, stringsAsFactors=FALSE))
+(mtr <- read.csv('mtr_google.com.csv', header=T, stringsAsFactors=F))
+```
+
+```{r, echo=F}
+mtr <- mtr[order(-mtr$Hop),]
+mtr$Ip <- factor(mtr$Ip, levels=mtr$Ip)
+```
+
+- Plot
+```{r, echo=F, warning=F, message=F, fig.width=9}
+p <- ggplot(mtr, aes(x=Ip, y=Avg))
+p <- p + geom_line(size=1)
+p <- p + geom_errorbar(aes(ymin=Avg-StDev, ymax=Avg+StDev), width=0.05, position=position_dodge(0.05))
+p <- p + geom_point(size=3, colour="darkred")
+p <- p + labs(title="Average and Standard Deviation of the latency", x="IP", y="Latency (ms)")
+p <- p + scale_y_continuous(breaks=seq(0,30,2))
+p <- p + theme(axis.text.x=element_text(face="bold")) 
+p <- p + theme(axis.text.y=element_text(face="bold")) 
+p <- p + coord_flip()
+p
 ```
 
 
