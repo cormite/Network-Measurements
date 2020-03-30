@@ -6,45 +6,49 @@ output:
     df_print: paged
 ---
 
-## Throughput
+## Throughput comparison
 
-### Import the data
+- Import the data
+
 ```{r, echo=F}
-(throughput <- read.csv(file = 'throughput.csv', stringsAsFactors = FALSE))
-```
-
-### Show dataframes internal structure
-```{r}
-str(throughput)
-```
-
-- Separate histograms
-```{r}
-hist(throughput$DFN, breaks = 10)
-hist(throughput$Telekom, breaks = 10)
+(throughput <- read.csv(file='throughput.csv', stringsAsFactors=FALSE))
 ```
 
 - Prepare data for ggplot
-```{r}
+
+```{r, echo=F, warning=F, message=F}
 library(reshape2)
 throughput_plot <- melt(throughput)
-colnames(throughput_plot) <- c("provider", "throughput")
+colnames(throughput_plot) <- c("Provider", "Throughput")
 ```
 
 - Combined histogram
-```{r, message=F, warning=F}
+
+```{r, message=F, warning=F, echo=F}
 library(ggplot2)
 
-p <- ggplot(throughput_plot, aes(x=throughput, fill=provider))
-p <- p + geom_histogram(alpha=0.7, binwidth = 0.02)
+p <- ggplot(throughput_plot, aes(x=Throughput, fill=Provider))
+p <- p + geom_histogram(alpha=1, binwidth = 0.04)
+p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
 p
 ```
 
 - Combined density plot
-```{r}
-p <- ggplot(throughput_plot, aes(x=throughput, fill=provider))
+
+```{r, echo=F}
+p <- ggplot(throughput_plot, aes(x=Throughput, fill=Provider))
 p <- p + geom_density()
+p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
 p
+```
+
+
+## Traceroute and latency comparison
+
+- Import the data
+
+```{r, echo=F}
+(mtr <- read.csv('mtr_google.com.txt', header=F, skip=2, stringsAsFactors=FALSE))
 ```
 
 
