@@ -1,0 +1,39 @@
+---
+title: "Latency between perfsonar.embl.es and perfsonar.embl.it"
+author: "Beatriz Serrano Solano"
+output:
+  html_document:
+    df_print: paged
+---
+
+## Traceroute and latency
+
+- Import the data
+
+```{r, echo=F}
+(mtr <- read.csv('perfsonar-to-perfsonar.embl.it.csv', header=T, stringsAsFactors=F))
+```
+
+```{r, echo=F}
+mtr <- mtr[order(-mtr$Hop),]
+mtr$Ip <- factor(mtr$Ip, levels=mtr$Ip)
+```
+
+- Plot
+```{r, echo=F, warning=F, message=F, fig.width=9}
+p <- ggplot(mtr, aes(x=Ip, y=Avg))
+p <- p + geom_line(size=1)
+p <- p + geom_errorbar(aes(ymin=Avg-StDev, ymax=Avg+StDev), width=0.05, position=position_dodge(0.05))
+p <- p + geom_point(size=3, colour="darkred")
+p <- p + labs(
+  title="Average and Standard Deviation of the latency",
+  subtitle="Source: perfsonar.embl.es (CSUC), Destination: perfsonar.embl.it (GARR)",
+  x="IP",
+  y="Latency (ms)")
+p <- p + scale_y_continuous(breaks=seq(0,60,2))
+p <- p + theme(axis.text.x=element_text(face="bold")) 
+p <- p + theme(axis.text.y=element_text(face="bold")) 
+p <- p + coord_flip()
+p
+```
+
