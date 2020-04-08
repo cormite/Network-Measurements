@@ -1,9 +1,20 @@
 ---
-title: "Network-Measurements-DFN-vs-Telekom"
-author: "Beatriz Serrano Solano"
+title: "Network Measurements"
+author:
+- "Beatriz Serrano Solano"
+- "Carlos Fernandez San Millan"
+abstract: |
+
+  Network data collected with iperf3 and mtr. Code in R to produce sensible data representations.
+   
+  Beatriz Serrano Solano: R code for proper semantics and sensitive graphical representation
+  Carlos Fernandez San Millan: collected network-related data.
+
 output:
   html_document:
     df_print: paged
+    
+#output: pdf_document
 ---
 
 ## Throughput comparison Ingress
