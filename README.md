@@ -1,2 +1,2 @@
 # Network-Measurements
-A repo to test and learn Rstudio
+Network data collected from iperf3 and mtr and worked with R to produce sensible data representations.
