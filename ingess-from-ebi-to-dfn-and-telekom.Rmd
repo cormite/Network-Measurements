@@ -3,7 +3,7 @@
 - Import the data
 
 ```{r, echo=F}
-(throughput <- read.csv(file='ingess-from-ebi-to-dfn-and-telekom.csv', stringsAsFactors=FALSE))
+(throughput <- read.csv(file='ingress_emblhd-ebihost.ebi.ac.uk_JANET_perfsonar1.embl.de_DFN_perfsonar2.embl.de_Telekom.csv', stringsAsFactors=FALSE))
 ```
 
 - Prepare data for ggplot
