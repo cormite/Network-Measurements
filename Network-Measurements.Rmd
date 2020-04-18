@@ -65,6 +65,9 @@ for(i in 1:nrow(metadata)) {
   #print (dataset)
   mtr <- read.csv(file = dataset$FileName, stringsAsFactors = FALSE)
   
+  # Rename "???" entries to avoid duplicates
+  mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__",mtr[mtr$Ip=="???",]$Hop)
+  
   mtr <- mtr[order(-mtr$Hop),]
   mtr$Ip <- factor(mtr$Ip, levels=mtr$Ip)
   
