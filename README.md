@@ -1,9 +1,11 @@
 # Network-Measurements
 
-## Graphical representation of network data
+## Authors:
+-Beatriz Serrano Solano - https://github.com/beatrizserrano (R code)  
+-Carlos Fernandez San Millan - https://github.com/Cormite (Network data collection)  
 
-Network data collected with iperf3 and mtr. Code in R to produce sensible data representations.
+### Abstract:
+Project written in R to produce semantical and sensible graphical representation of network data collected with iperf3 and mtr.  
 
-### Authors
-- Beatriz Serrano Solano: R code for proper semantics and sensitive graphical representation.
-- Carlos Fernandez San Millan: collected network-related data.
+Project home: https://github.com/cormite/Network-Measurements
+
