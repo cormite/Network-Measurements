@@ -11,7 +11,9 @@ output:
 - Import the data
 
 ```{r, echo=F}
-(mtr <- read.csv('perfsonar1.embl.de-to-perfsonar.embl.it.csv', header=T, stringsAsFactors=F))
+library(reshape2)
+library(ggplot2)
+mtr <- read.csv('perfsonar1.embl.de-to-perfsonar.embl.it.csv', header=T, stringsAsFactors=F)
 ```
 
 ```{r, echo=F}

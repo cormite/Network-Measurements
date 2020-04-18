@@ -11,10 +11,12 @@ output:
 - Import the data
 
 ```{r, echo=F}
-(mtr <- read.csv('perfsonar2.embl.de-to-perfsonar.embl.es.csv', header=T, stringsAsFactors=F))
+mtr <- read.csv('mtr-from-perfsonar2.embl.de-to-perfsonar.embl.es.csv', header=T, stringsAsFactors=F)
 ```
 
 ```{r, echo=F}
+library(reshape2)
+library(ggplot2)
 mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__",mtr[mtr$Ip=="???",]$Hop)
 mtr <- mtr[order(-mtr$Hop),]
 mtr$Ip <- factor(mtr$Ip,levels = mtr$Ip)

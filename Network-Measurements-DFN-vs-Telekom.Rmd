@@ -22,7 +22,7 @@ output:
 - Import the data
 
 ```{r, echo=F}
-(throughput <- read.csv(file='ingress.csv', stringsAsFactors=FALSE))
+throughput <- read.csv(file='ingress-from-perfsonar.embl.es-to-perfsonar1.embl.de-and-perfsonar2.embl.de.csv', stringsAsFactors=FALSE)
 ```
 
 - Prepare data for ggplot
@@ -44,7 +44,7 @@ p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
 p <- p + scale_x_continuous(breaks=seq(5,10,0.5))
 p <- p + theme(axis.text.x=element_text(face="bold")) 
 p <- p + theme(axis.text.y=element_text(face="bold")) 
-p
+#p
 ```
 
 - Combined density plot
@@ -71,7 +71,7 @@ p
 - Import the data
 
 ```{r, echo=F}
-(throughput <- read.csv(file='egress.csv', stringsAsFactors=FALSE))
+throughput <- read.csv(file='egress-from-perfsonar1.embl.de-and-perfsonar2.embl.de-to-perfsonar.embl.es.csv', stringsAsFactors=FALSE)
 ```
 
 - Prepare data for ggplot
@@ -93,7 +93,7 @@ p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
 p <- p + scale_x_continuous(breaks=seq(5,10,0.5))
 p <- p + theme(axis.text.x=element_text(face="bold")) 
 p <- p + theme(axis.text.y=element_text(face="bold")) 
-p
+#p
 ```
 
 - Combined density plot
@@ -122,7 +122,7 @@ p
 - Import the data
 
 ```{r, echo=F}
-(throughput <- read.csv(file='egress-to-Rome.csv', stringsAsFactors=FALSE))
+throughput <- read.csv(file='egress-from-perfsonar1.embl.de-and-perfsonar2.embl.de-to-perfsonar.embl.it.csv', stringsAsFactors=FALSE)
 ```
 
 - Prepare data for ggplot
@@ -144,7 +144,7 @@ p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
 p <- p + scale_x_continuous(breaks=seq(0,1200,100))
 p <- p + theme(axis.text.x=element_text(face="bold")) 
 p <- p + theme(axis.text.y=element_text(face="bold")) 
-p
+#p
 ```
 
 - Combined density plot
@@ -172,7 +172,7 @@ p
 - Import the data
 
 ```{r, echo=F}
-(throughput <- read.csv(file='ingress-from-Rome.csv', stringsAsFactors=FALSE))
+throughput <- read.csv(file='ingress-from-perfsonar.embl.it-to-perfsonar1.embl.de-and-perfsonar2.embl.de.csv', stringsAsFactors=FALSE)
 ```
 
 - Prepare data for ggplot
@@ -194,7 +194,7 @@ p <- p + scale_fill_manual(values=c("#00599d", "#bf0e88"))
 p <- p + scale_x_continuous(breaks=seq(0,1200,100))
 p <- p + theme(axis.text.x=element_text(face="bold")) 
 p <- p + theme(axis.text.y=element_text(face="bold")) 
-p
+#p
 ```
 
 - Combined density plot
@@ -231,7 +231,7 @@ p
 - Import the data
 
 ```{r, echo=F}
-(mtr <- read.csv('mtr_google.com.csv', header=T, stringsAsFactors=F))
+mtr <- read.csv('mtr_google.com.csv', header=T, stringsAsFactors=F)
 ```
 
 ```{r, echo=F}
