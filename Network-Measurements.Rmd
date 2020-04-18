@@ -1,15 +1,14 @@
 ---
 title: "Network Measurements"
 author:
-- Beatriz Serrano Solano
-- Carlos Fernandez San Millan
+- Beatriz Serrano Solano - https://github.com/beatrizserrano
+- Carlos Fernandez San Millan - https://github.com/Cormite
 abstract: |
-
-  Network data collected with iperf3 and mtr. Code in R to produce sensible data representations.
+  Project written in R to produce semantical and sensible graphical representation of network data collected with iperf3 and mtr.
    
-  Beatriz Serrano Solano: R code for proper semantics and sensitive graphical representation.
-  
+  Beatriz Serrano Solano: R code.
   Carlos Fernandez San Millan: Network data collection.
+  Project home: https://github.com/cormite/Network-Measurements
 output:
   html_document:
     df_print: paged
@@ -17,7 +16,7 @@ output:
   word_document: default
 ---
 
-## Throughput comparison
+## Throughput Report - DFN vs Telekom
 
 ### Ingress & Egress EMBL Outstations
 
@@ -26,11 +25,11 @@ The following graphs represent the throughput achieved from and to EMBL (Heidelb
 ```{r, message=F, warning=F, echo=F, fig.width=9}
 library(reshape2)
 library(ggplot2)
-metadata <- read.csv(file=file.path(getwd(), "throughput-metadata.csv"), stringsAsFactors=FALSE, sep = ",")
+metadata <- read.csv(file=file.path(getwd(), "data/metadata/throughput-metadata.csv"), stringsAsFactors=FALSE, sep = ",")
 for(i in 1:nrow(metadata)) {
   dataset <- metadata[i,]
   #print (dataset)
-  throughput <- read.csv(file = dataset$FileName, stringsAsFactors = FALSE)
+  throughput <- read.csv(file = paste0("data/throughput/",dataset$FileName), stringsAsFactors = FALSE)
   throughput_plot <- melt(throughput)
   colnames(throughput_plot) <- c("Provider", "Throughput")
   
@@ -59,14 +58,14 @@ for(i in 1:nrow(metadata)) {
 ## Traceroute and latency
 
 ```{r, message=F, warning=F, echo=F, fig.width=9}
-metadata <- read.csv(file=file.path(getwd(), "latency-metadata.csv"), stringsAsFactors=FALSE, sep = ",")
+metadata <- read.csv(file=file.path(getwd(), "data/metadata/latency-metadata.csv"), stringsAsFactors=FALSE, sep = ",")
 for(i in 1:nrow(metadata)) {
   dataset <- metadata[i,]
   #print (dataset)
-  mtr <- read.csv(file = dataset$FileName, stringsAsFactors = FALSE)
+  mtr <- read.csv(file = paste0("data/traceroute-and-latency/",dataset$FileName), header=T, stringsAsFactors = FALSE)
   
   # Rename "???" entries to avoid duplicates
-  mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__",mtr[mtr$Ip=="???",]$Hop)
+  #(mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__", mtr[mtr$Ip=="???",]$Hop))
   
   mtr <- mtr[order(-mtr$Hop),]
   mtr$Ip <- factor(mtr$Ip, levels=mtr$Ip)
@@ -82,7 +81,7 @@ for(i in 1:nrow(metadata)) {
   p <- p + geom_point(size=3, colour="darkred")
   p <- p + labs(title="Average and Standard Deviation of the latency",
                 subtitle = paste0("Source: ", dataset$Source, " \nDestination: ", dataset$Destination),
-                x="IP",
+                x="Hostname / IP",
                 y="Latency (ms)")
   p <- p + scale_y_continuous(breaks=seq(min,max,jump_size))
   p <- p + theme(axis.text.x=element_text(face="bold")) 
