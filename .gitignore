@@ -5,4 +5,3 @@
 Network-Measurements.Rproj
 retrieve-all-csv-files.bash
 produce-all-csv-files-and-download.bash
-*.csv

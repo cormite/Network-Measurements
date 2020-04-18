@@ -1,0 +1,12 @@
+Mtr_Version,Start_Time,Status,Host,Hop,Ip,Loss%,Snt, ,Last,Avg,Best,Wrst,StDev,
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,1,185.111.60.2,0.00,600,0,0.15,0.11,0.10,0.24,0.05
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,2,62.157.249.41,0.00,600,0,4.46,2.11,0.54,33.41,4.40
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,3,62.154.15.242,0.00,600,0,3.16,3.14,2.71,33.47,1.85
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,4,ffm-b4-link.telia.net,15.50,600,93,3.33,4.99,3.15,71.57,7.32
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,5,ffm-bb1-link.telia.net,0.00,600,0,12.08,11.80,11.64,12.38,0.16
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,6,mno-b3-link.telia.net,0.00,600,0,11.83,11.96,11.63,56.77,2.70
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,7,consortiumgarr-ic-326851-mno-b2.c.telia.net,0.00,600,0,11.79,11.81,11.61,22.84,0.86
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,8,rx2-mi2-rx2-rm2.rm2.garr.net,0.00,600,0,22.66,22.61,22.33,27.60,0.67
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,9,rx2-rm2-rx1-rm2.rm2.garr.net,0.00,600,0,23.37,23.31,22.25,70.27,5.29
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,10,rx1-rm2-ru-embl-pri.rm2.garr.net,0.00,600,0,22.95,24.02,22.84,89.59,6.22
+MTR.0.93.43-155f,1585746962,OK,perfsonar.embl.it,11,90.147.25.5,0.00,600,0,22.73,23.50,22.61,85.30,5.95

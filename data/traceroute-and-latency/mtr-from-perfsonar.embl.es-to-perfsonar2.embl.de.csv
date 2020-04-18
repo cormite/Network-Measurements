@@ -1,0 +1,12 @@
+Mtr_Version,Start_Time,Status,Host,Hop,Ip,Loss%,Snt, ,Last,Avg,Best,Wrst,StDev,
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,1,10.250.7.253,57.17,600,343,0.29,0.23,0.18,1.57,0.12
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,2,10.250.0.1,55.50,600,333,0.09,0.07,0.04,1.09,0.07
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,3,anella-embl.csuc.cat,0.00,600,0,1.08,0.90,0.79,1.96,0.13
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,4,anella-val1.ae2-454.uv.rt1.val.red.rediris.es,0.00,600,0,5.63,8.58,5.50,74.03,8.64
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,5,uv.ae5.telmad.rt4.mad.red.rediris.es,0.00,600,0,11.93,12.12,11.79,46.49,1.91
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,6,ae11.cr6-mad4.ip4.gtt.net,0.00,600,0,12.06,12.62,11.82,44.66,3.29
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,7,et-1-1-0.cr0-par9.ip4.gtt.net,0.00,600,0,31.59,28.95,26.94,110.72,5.02
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,8,ip4.gtt.net,0.00,600,0,35.80,32.36,30.99,36.59,2.08
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,9,ma-eb5-i.MA.DE.NET.DTAG.DE,0.00,600,0,48.92,45.37,43.54,72.30,3.11
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,10,62.157.249.42,0.00,600,0,48.23,44.79,43.59,48.66,2.04
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,11,perfsonar2.embl.de,0.00,600,0,53.46,50.02,48.81,53.63,2.05

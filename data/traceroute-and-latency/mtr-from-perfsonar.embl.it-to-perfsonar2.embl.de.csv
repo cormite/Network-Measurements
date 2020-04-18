@@ -1,0 +1,12 @@
+Mtr_Version,Start_Time,Status,Host,Hop,Ip,Loss%,Snt, ,Last,Avg,Best,Wrst,StDev,
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,1,90.147.25.3,0.00,600,0,0.62,0.88,0.48,36.70,1.95
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,2,ru-embl-pri-rx1-rm2.rm2.garr.net,0.00,600,0,1.72,2.74,0.56,60.92,8.73
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,3,rx1-rm2-rx2-rm2.rm2.garr.net,0.00,600,0,2.91,2.22,0.78,62.24,5.80
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,4,rx2-rm2-rx2-mi2.mi2.garr.net,0.17,600,1,11.37,12.55,11.20,79.42,6.51
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,5,mno-b2-link.telia.net,2.33,600,14,11.96,13.69,11.73,76.72,8.12
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,6,ffm-bb2-link.telia.net,0.00,600,0,20.54,21.15,20.16,86.77,5.93
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,7,ffm-b1-link.telia.net,0.00,600,0,38.54,22.68,20.03,90.50,7.76
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,8,dtag-ic-319285-ffm-b1.c.telia.net,0.00,600,0,20.59,22.26,20.28,403.23,17.36
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,9,ma-eb5-i.MA.DE.NET.DTAG.DE,0.00,600,0,22.49,23.65,22.33,87.19,5.74
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,10,62.157.249.42,0.00,600,0,22.75,23.38,22.63,88.72,5.56
+MTR.0.93.43-155f,1585746962,OK,perfsonar2.embl.de,11,perfsonar2.embl.de,0.00,600,0,22.84,23.59,22.64,103.30,6.48

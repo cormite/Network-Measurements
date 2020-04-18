@@ -1,0 +1,16 @@
+FileName,Source,Destination
+mtr-from-cfernand.embl.de-to-google.com.csv,cfernand.embl.de (EMBL),google.com
+mtr-from-perfsonar.embl.es-to-perfsonar.embl.it.csv,perfsonar.embl.es (CSUC),perfsonar.embl.it (GARR)
+mtr-from-perfsonar.embl.es-to-perfsonar2.embl.de.csv,perfsonar.embl.es (CSUC),perfsonar2.embl.de (Telekom)
+mtr-from-perfsonar.embl.es-to-perfsonar1.embl.de.csv,perfsonar.embl.es (CSUC),perfsonar1.embl.de (DFN)
+mtr-from-perfsonar.embl.it-to-perfsonar.embl.es.csv,perfsonar.embl.it (GARR),perfsonar.embl.es (CSUC)
+mtr-from-perfsonar.embl.it-to-perfsonar2.embl.de.csv,perfsonar.embl.it (GARR),perfsonar2.embl.de (Telekom)
+mtr-from-perfsonar.embl.it-to-perfsonar1.embl.de.csv,perfsonar.embl.it (GARR),perfsonar1.embl.de (DFN)
+mtr-from-perfsonar1.embl.de-to-perfsonar.embl.it.csv,perfsonar1.embl.de (DFN),perfsonar.embl.it (GARR)
+mtr-from-perfsonar1.embl.de-to-perfsonar.embl.es.csv,perfsonar1.embl.de (DFN),perfsonar.embl.es (CSUC)
+mtr-from-perfsonar1.embl.de-to-perfsonar2.embl.de.csv,perfsonar1.embl.de (DFN),perfsonar2.embl.de (Telekom)
+mtr-from-perfsonar1.embl.de-to-www.ebi.ac.uk.csv,perfsonar1.embl.de (DFN),www.ebi.ac.uk (JANET)
+mtr-from-perfsonar2.embl.de-to-perfsonar.embl.es.csv,perfsonar2.embl.de (Telekom),perfsonar.embl.es (CSUS)
+mtr-from-perfsonar2.embl.de-to-perfsonar1.embl.de.csv,perfsonar2.embl.de (Telekom),perfsonar1.embl.de (DFN)
+mtr-from-perfsonar2.embl.de-to-perfsonar.embl.it.csv,perfsonar2.embl.de (Telekom),perfsonar.embl.it (GARR)
+mtr-from-perfsonar2.embl.de-to-www.ebi.ac.uk.csv,perfsonar2.embl.de (Telekom),www.ebi.ac.uk (JANET)

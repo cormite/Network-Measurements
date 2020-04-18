@@ -1,0 +1,11 @@
+Mtr_Version,Start_Time,Status,Host,Hop,Ip,Loss%,Snt, ,Last,Avg,Best,Wrst,StDev,
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,1,185.111.60.2,0.00,600,0,0.16,0.11,0.10,0.25,0.05
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,2,62.157.249.41,0.00,600,0,0.68,1.21,0.57,22.43,2.22
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,3,217.5.118.46,0.00,600,0,3.21,3.06,2.65,49.60,2.14
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,4,ffm-b4-link.telia.net,0.33,600,2,3.23,4.13,2.87,68.19,6.20
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,5,ffm-bb2-link.telia.net,0.00,600,0,3.58,3.48,3.29,4.40,0.18
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,6,ffm-b12-link.telia.net,0.00,600,0,3.14,4.34,2.98,84.33,7.30
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,7,dfn-ic-326948-ffm-b12.c.telia.net,0.00,600,0,3.52,3.45,3.16,17.84,0.83
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,8,cr-gar1-be6.x-win.dfn.de,0.00,600,0,12.30,11.96,11.70,17.53,0.28
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,9,kr-emblhd11-0.x-win.dfn.de,0.00,600,0,19.64,19.55,19.52,20.08,0.09
+MTR.0.93.43-155f,1585746961,OK,perfsonar1.embl.de,10,perfsonar1.embl.de,0.00,600,0,19.87,19.77,19.69,20.77,0.10

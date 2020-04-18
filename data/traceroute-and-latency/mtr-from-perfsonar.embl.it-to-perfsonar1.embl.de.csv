@@ -1,0 +1,12 @@
+Mtr_Version,Start_Time,Status,Host,Hop,Ip,Loss%,Snt, ,Last,Avg,Best,Wrst,StDev,
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,1,90.147.25.3,0.00,600,0,0.64,0.77,0.51,23.86,1.48
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,2,ru-embl-pri-rx1-rm2.rm2.garr.net,0.17,600,1,0.65,2.49,0.58,60.55,7.73
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,3,rx1-rm2-rx2-rm2.rm2.garr.net,0.00,600,0,2.60,2.22,0.78,62.05,5.85
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,4,rx2-rm2-rx2-mi2.mi2.garr.net,0.00,600,0,11.30,12.53,11.22,80.99,6.49
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,5,garr.mx1.mil2.it.geant.net,0.00,600,0,11.33,12.74,11.27,77.78,6.55
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,6,ae6.mx1.gen.ch.geant.net,0.00,600,0,18.28,19.54,18.16,84.98,6.31
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,7,62.40.98.180,0.00,600,0,26.78,28.06,26.46,89.37,6.71
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,8,cr-fra1.x-win.dfn.de,0.00,600,0,27.07,27.71,26.64,91.35,5.48
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,9,cr-gar1-be6.x-win.dfn.de,0.00,600,0,35.44,36.12,35.13,100.61,5.41
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,10,kr-emblhd11-0.x-win.dfn.de,0.00,600,0,43.01,43.63,42.90,109.09,5.55
+MTR.0.93.43-155f,1585746962,OK,perfsonar1.embl.de,11,perfsonar1.embl.de,0.00,600,0,43.05,43.84,42.95,100.47,5.89

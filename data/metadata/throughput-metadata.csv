@@ -1,0 +1,6 @@
+FileName,Direction,Source,Destination
+ingress-from-perfsonar.embl.es-to-perfsonar1.embl.de-and-perfsonar2.embl.de.csv,ingress,perfsonar.embl.es (CSUC),perfsonar1.embl.de (DFN) & perfsonar2.embl.de (Telekom)
+egress-from-perfsonar1.embl.de-and-perfsonar2.embl.de-to-perfsonar.embl.es.csv,egress,perfsonar1.embl.de (DFN) & perfsonar2.embl.de (Telekom),perfsonar.embl.es (CSUC)
+ingress-from-perfsonar.embl.it-to-perfsonar1.embl.de-and-perfsonar2.embl.de.csv,ingress,perfsonar.embl.it (GARR),perfsonar1.embl.de (DFN) & perfsonar2.embl.de (Telekom)
+egress-from-perfsonar1.embl.de-and-perfsonar2.embl.de-to-perfsonar.embl.it.csv,egress,perfsonar1.embl.de (DFN) & perfsonar2.embl.de (Telekom),perfsonar.embl.it (GARR)
+ingress-from-emblhd-ebihost.ebi.ac.uk-to-perfsonar1.embl.de-and-perfsonar2.embl.de.csv,ingress,emblhd-ebihost.ebi.ac.uk (JANET),perfsonar1.embl.de (DFN) & perfsonar2.embl.de (Telekom)

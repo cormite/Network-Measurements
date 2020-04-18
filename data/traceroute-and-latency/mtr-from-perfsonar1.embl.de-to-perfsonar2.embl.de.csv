@@ -1,0 +1,11 @@
+Mtr_Version,Start_Time,Status,Host,Hop,Ip,Loss%,Snt, ,Last,Avg,Best,Wrst,StDev,
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,1,194.94.46.3,0.00,600,0,0.18,0.13,0.12,0.26,0.03
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,2,cr-gar1-pwether11126.x-win.dfn.de,0.00,600,0,8.52,8.48,8.36,8.97,0.16
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,3,cr-fra2-be14.x-win.dfn.de,0.00,600,0,17.38,17.12,16.92,25.15,0.40
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,4,ffm-b12-link.telia.net,0.00,600,0,16.83,17.78,16.76,40.61,3.10
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,5,ffm-bb2-link.telia.net,0.00,600,0,17.44,17.40,17.26,18.95,0.18
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,6,ffm-b1-link.telia.net,0.00,600,0,32.84,18.45,17.18,57.41,3.79
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,7,dtag-ic-319285-ffm-b1.c.telia.net,0.00,600,0,17.88,18.62,17.41,289.02,13.13
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,8,ma-eb5-i.MA.DE.NET.DTAG.DE,0.00,600,0,19.54,20.12,19.37,64.56,3.42
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,9,62.157.249.42,0.00,600,0,19.78,19.77,19.72,20.54,0.07
+MTR.0.93.43-155f,1585746961,OK,perfsonar2.embl.de,10,perfsonar2.embl.de,0.00,600,0,19.90,19.79,19.68,21.21,0.11
