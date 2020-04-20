@@ -7,8 +7,11 @@ abstract: |
   Project written in R to produce semantical and sensible graphical representation of network data collected with iperf3 and mtr.
    
   Beatriz Serrano Solano: R code.
+  
   Carlos Fernandez San Millan: Network data collection.
+  
   Project home: https://github.com/cormite/Network-Measurements
+  
 output:
   html_document:
     df_print: paged
@@ -58,14 +61,18 @@ for(i in 1:nrow(metadata)) {
 ## Traceroute and latency
 
 ```{r, message=F, warning=F, echo=F, fig.width=9}
-metadata <- read.csv(file=file.path(getwd(), "data/metadata/latency-metadata.csv"), stringsAsFactors=FALSE, sep = ",")
+#metadata <- read.csv(file=file.path(getwd(), "data/metadata/latency-metadata.csv"), stringsAsFactors=FALSE, sep = ",")
+metadata <- read.csv(file=file.path(getwd(), "data/metadata/latency-metadata-all.csv"), stringsAsFactors=FALSE, sep = ",")
 for(i in 1:nrow(metadata)) {
   dataset <- metadata[i,]
   #print (dataset)
   mtr <- read.csv(file = paste0("data/traceroute-and-latency/",dataset$FileName), header=T, stringsAsFactors = FALSE)
   
   # Rename "???" entries to avoid duplicates
-  #(mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__", mtr[mtr$Ip=="???",]$Hop))
+  if (nrow(mtr[mtr$Ip=="???",]) > 0) # If the file contains elements with "???"
+  {
+    (mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__", mtr[mtr$Ip=="???",]$Hop))
+  }
   
   mtr <- mtr[order(-mtr$Hop),]
   mtr$Ip <- factor(mtr$Ip, levels=mtr$Ip)
