@@ -7,15 +7,12 @@ abstract: |
   Project written in R to produce semantical and sensible graphical representation of network data collected with iperf3 and mtr.
    
   Beatriz Serrano Solano: R code.
-  
   Carlos Fernandez San Millan: Network data collection.
-  
   Project home: https://github.com/cormite/Network-Measurements
-  
 output:
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
   word_document: default
 ---
 
@@ -39,7 +36,19 @@ for(i in 1:nrow(metadata)) {
   min <- min(throughput_plot$Throughput)
   max <- max(throughput_plot$Throughput)
   jump_size <- round((max - min) / 20, digits = 1)
+  if (max - min >= 10) {
+    jump_size <- jump_size * 10
+  }
   
+  #print(dataset$FileName)
+  #print(paste0("min: ",min))
+  #print(paste0("max: ",max))
+  #print(paste0("jump_size: ",jump_size))
+  
+  throughput_string <- "Throughput (Gbps)"
+  if (min > 10) {
+    throughput_string <- "Throughput (Mbps)"
+  }
   
   p <- ggplot(throughput_plot, aes(x = Throughput, fill = Provider))
   #p <- p + geom_histogram(alpha=1, binwidth = 0.04)
@@ -50,7 +59,7 @@ for(i in 1:nrow(metadata)) {
   p <- p + theme(axis.text.y = element_text(face = "bold"))
   p <- p + labs(
     title = paste0("Throughput Report"),
-    subtitle = paste0("Source: ", dataset$Source, " \nDestination: ", dataset$Destination), x = "Throughput (Gbps)"
+    subtitle = paste0("Source: ", dataset$Source, " \nDestination: ", dataset$Destination), x = throughput_string
   )
   print(p)
 }
@@ -71,7 +80,7 @@ for(i in 1:nrow(metadata)) {
   # Rename "???" entries to avoid duplicates
   if (nrow(mtr[mtr$Ip=="???",]) > 0) # If the file contains elements with "???"
   {
-    (mtr[mtr$Ip=="???",]$Ip <- paste0("Hop__", mtr[mtr$Ip=="???",]$Hop))
+    (mtr[mtr$Ip=="???",]$Ip <- paste0("Hop_", mtr[mtr$Ip=="???",]$Hop, ": misconfigured device, ICMP block, etc."))
   }
   
   mtr <- mtr[order(-mtr$Hop),]
@@ -79,7 +88,12 @@ for(i in 1:nrow(metadata)) {
   
   min <- min(mtr$Best)
   max <- max(mtr$Wrst)
-  jump_size <- round((max - min) / 20, digits = 1)
+  jump_size <- round((max - min) / 17, digits = 1)
+  
+  #print(dataset$FileName)
+  #print(paste0("min: ",min))
+  #print(paste0("max: ",max))
+  #print(paste0("jump_size: ",jump_size))
   
   # Plot
   p <- ggplot(mtr, aes(x=Ip, y=Avg))
